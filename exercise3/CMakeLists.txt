@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 2.8.3)
-project(ros_topic)
+project(exercise3)
 
 ## Compile as C++11, supported in ROS Kinetic and newer
 # add_compile_options(-std=c++11)
@@ -49,7 +49,8 @@ message_generation
 ## Generate messages in the 'msg' folder
  add_message_files(
   FILES
-  demo.msg
+  mess1.msg
+  mess2.msg
  )
 ## Generate services in the 'srv' folder
 # add_service_files(
@@ -131,11 +132,15 @@ include_directories(
 ## Declare a C++ executable
 ## With catkin_make all packages are built within a single CMake context
 ## The recommended prefix ensures that target names across packages don't collide
-add_executable( ros_publisher src/ros_publisher.cpp)
-target_link_libraries( ros_publisher ${catkin_LIBRARIES} )
+add_executable( exer3_publisher src/exer3_publisher.cpp)
+target_link_libraries( exer3_publisher ${catkin_LIBRARIES} )
 
-add_executable( ros_subscriber src/ros_subscriber.cpp)
-target_link_libraries( ros_subscriber ${catkin_LIBRARIES} )
+add_executable( exer3_subscriber src/exer3_subscriber.cpp)
+target_link_libraries( exer3_subscriber ${catkin_LIBRARIES} )
+
+add_executable( test src/test.cpp)
+target_link_libraries( test ${catkin_LIBRARIES} )
+
 
 ## Rename C++ executable without prefix
 ## The above recommended prefix causes long target names, the following renames the
