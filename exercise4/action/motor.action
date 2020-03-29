@@ -1,0 +1,10 @@
+#goal definition
+int32 initial_position
+int32 final_position
+int32 max_angular_velocity
+---
+#result definition
+int32 reached_position
+---
+#feedback
+int32 current_position
