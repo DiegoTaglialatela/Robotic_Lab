@@ -1,0 +1,141 @@
+<?xml version="1.0"?>
+
+<robot name="ex6model_tilt" xmlns:xacro="http://wiki.ros.org/xacro">
+    <xacro:include filename="$(find rl_robot_description_pkg)/urdf/ex6model_macro.xacro" />
+	
+		<xacro:base_link_macro 
+			base_link_name="base_link">
+		</xacro:base_link_macro>
+	
+                <xacro:ex6model_joint
+			name="joint0"
+			type="prismatic"
+			parent="base_link"
+			child="link0">
+			<origin xyz="0 0 0.005" />
+			<axis xyz="0 1 0"/>
+		</xacro:ex6model_joint>
+
+		<xacro:ex6model_link name="link0">
+			<geometry>
+				<cylinder length="0.2" radius="0.05"/>
+			</geometry>
+			<origin xyz="0 0 0.1" rpy="0 0 0"/>
+		</xacro:ex6model_link>
+
+		<xacro:ex6model_joint
+			name="joint1"
+			type="revolute"
+			parent="link0"
+			child="link1">
+			<origin xyz="0 0 0.2" />
+			<axis xyz="0 0 1"/>
+		</xacro:ex6model_joint>
+
+		<xacro:ex6model_link name="link1">
+			<geometry>
+				<cylinder length="0.2" radius="0.05"/>
+			</geometry>
+			<origin xyz="0 0 0.1" rpy="0 0 0"/>
+		</xacro:ex6model_link>
+
+		<xacro:ex6model_joint
+			name="joint2"
+			type="revolute"
+			parent="link1"
+			child="link2">
+			<origin xyz="0 0 0.2" />
+			<axis xyz="0 1 0"/>
+		</xacro:ex6model_joint>
+
+		<xacro:ex6model_link name="link2">
+			<geometry>
+				<cylinder length="0.2" radius="0.05"/>
+			</geometry>
+			<origin xyz="0 0 0.1" rpy="0 0 0"/>
+		</xacro:ex6model_link>
+                
+                <xacro:ex6model_joint
+			name="joint3"
+			type="revolute"
+			parent="link2"
+			child="link3">
+			<origin xyz="0 0 0.2" />
+			<axis xyz="0 0 1"/>
+		</xacro:ex6model_joint>
+
+		<xacro:ex6model_link name="link3">
+			<geometry>
+				<cylinder length="0.2" radius="0.05"/>
+			</geometry>
+			<origin xyz="0 0 0.1" rpy="0 0 0"/>
+		</xacro:ex6model_link>
+                
+                <xacro:ex6model_joint
+			name="joint4"
+			type="revolute"
+			parent="link3"
+			child="link4">
+			<origin xyz="0 0 0.2" />
+			<axis xyz="0 1 0"/>
+		</xacro:ex6model_joint>
+
+		<xacro:ex6model_link name="link4">
+			<geometry>
+				<cylinder length="0.2" radius="0.05"/>
+			</geometry>
+			<origin xyz="0 0 0.1" rpy="0 0 0"/>
+		</xacro:ex6model_link>
+                
+                <xacro:ex6model_joint
+			name="joint5"
+			type="revolute"
+			parent="link4"
+			child="link5">
+			<origin xyz="0 0 0.2" />
+			<axis xyz="0 0 1"/>
+		</xacro:ex6model_joint>
+
+		<xacro:ex6model_link name="link5">
+			<geometry>
+				<cylinder length="0.2" radius="0.05"/>
+			</geometry>
+			<origin xyz="0 0 0.1" rpy="0 0 0"/>
+		</xacro:ex6model_link>
+                
+                <xacro:ex6model_joint
+			name="joint6"
+			type="revolute"
+			parent="link5"
+			child="link6">
+			<origin xyz="0 0 0.2" />
+			<axis xyz="0 1 0"/>
+		</xacro:ex6model_joint>
+
+		<xacro:ex6model_link name="link6">
+			<geometry>
+				<cylinder length="0.2" radius="0.05"/>
+			</geometry>
+			<origin xyz="0 0 0.1" rpy="0 0 0"/>
+		</xacro:ex6model_link>
+                
+                <xacro:ex6model_joint
+			name="joint7"
+			type="revolute"
+			parent="link6"
+			child="link7">
+			<origin xyz="0 0 0.2" />
+			<axis xyz="0 0 1"/>
+		</xacro:ex6model_joint>
+
+		<xacro:ex6model_link name="link7">
+			<geometry>
+				<cylinder length="0.01" radius="0.03"/>
+			</geometry>
+			<origin xyz="0 0 0.005" rpy="0 0 0"/>
+		</xacro:ex6model_link>
+		
+		
+		
+
+</robot>

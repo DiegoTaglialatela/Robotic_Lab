@@ -1,0 +1,1 @@
+The .xacro _macro.xacro and the .launch files relative to exercise 5 and exercise 6 are in rl_robot_description_pkg package.
