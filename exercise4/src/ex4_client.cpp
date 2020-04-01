@@ -26,15 +26,14 @@ int main (int argc, char **argv) {
 
   // send a goal to the action
   exercise4::motorGoal goal;
-  goal.initial_position = atoi(argv[1]);
-  goal.final_position = atoi(argv[2]);
-  goal.max_angular_velocity = atoi(argv[3]);
-  
-  ROS_INFO("Sending Goal [%d] and Preempt time of [%d]",goal.final_position, atoi(argv[4]));
+  goal.initial_position = atof(argv[1]);
+  goal.final_position = atof(argv[2]);
+  goal.max_angular_velocity = atof(argv[3]);
+  ROS_INFO("Sending Goal [%f] and Preempt time of [%f]",goal.final_position, atof(argv[4]));
   ac.sendGoal(goal);
 
   //wait for the action to return
-  bool finished_before_timeout = ac.waitForResult(ros::Duration(atoi(argv[4])));
+  bool finished_before_timeout = ac.waitForResult(ros::Duration(atof(argv[4])));
   //Preempting task
   ac.cancelGoal();
 

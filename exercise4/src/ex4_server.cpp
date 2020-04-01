@@ -16,8 +16,8 @@ class action_class {
 		exercise4::motorResult result;
 
   	std::string action_name;
-  	int goal;
-  	int progress;
+  	float goal;
+  	float progress;
 
 	public:
 		action_class(std::string name) :
@@ -35,9 +35,9 @@ class action_class {
   
 		void executeCB(const exercise4::motorGoalConstPtr &goal) {
 			if(!as.isActive() || as.isPreemptRequested()) return;
-			ros::Rate rate(goal->max_angular_velocity);
-			ROS_INFO("%s is processing the goal %d", action_name.c_str(), goal->final_position);
-			for(progress = goal->initial_position ; progress <= goal->final_position; progress++){
+			ros::Rate rate(10);
+			ROS_INFO("%s is processing the goal %f", action_name.c_str(), goal->final_position);
+			for(progress = goal->initial_position ; progress <= goal->final_position+goal->max_angular_velocity;progress=progress+((goal->max_angular_velocity)/10)){
 				//Check for ros
 				if (!ros::ok()) {
 					result.reached_position = progress;
@@ -51,12 +51,12 @@ class action_class {
 				}	
 
 				if(goal->final_position <= progress) {
-					ROS_INFO("%s Succeeded at getting to goal %d", action_name.c_str(), goal->final_position);
+					ROS_INFO("%s Succeeded at getting to goal %f", action_name.c_str(), goal->final_position);
 					result.reached_position = progress;
 					as.setSucceeded(result);
 				}
 				else {
-					ROS_INFO("Setting to goal %d / %d",feedback.current_position,goal->final_position);
+					ROS_INFO("Setting to goal %f / %f",feedback.current_position,goal->final_position);
 					feedback.current_position = progress;
 					as.publishFeedback(feedback);
 			}
