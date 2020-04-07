@@ -1,0 +1,12 @@
+<?xml version="1.0" ?>
+
+<launch>
+	<arg name="model" />
+	<param name="robot_description" command="$(find xacro)/xacro $(find exercise7)/urdf/ex5model.xacro" />
+	<param name="use_gui" value="true"/>
+
+	<node name="robot_state_publisher" pkg="robot_state_publisher" type="robot_state_publisher" />
+	
+	<node name="rviz" pkg="rviz" type="rviz" args="-d $(find exercise7)/urdf.rviz" required="true" />
+
+</launch>

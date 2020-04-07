@@ -2,35 +2,30 @@
 #include "std_msgs/Int32.h"
 #include <iostream>
 
-class ROS_SUB{
-public:
- ROS_SUB();
- void topic_cb( std_msgs::Int32ConstPtr data);
-
-private:
-
- ros::NodeHandle _nh;
- ros::Subscriber _topic_sub;
-
-};
-
-ROS_SUB::ROS_SUB() {
-
-_topic_sub=_nh.subscribe( "/numbers", 10, &ROS_SUB::topic_cb, this);
-
-}
-
-void ROS_SUB::topic_cb( std_msgs::Int32ConstPtr data){
-std::cout<< "data:"<<data->data<<std::endl;
-}
-
 int main(int argc, char **argv) {
 
+ std::cout<< "hello!" << std::endl;
 
- ros::init ( argc, argv, "ros_topic_sub" );
- ROS_SUB rs;
+ ros::init ( argc, argv, "ros_topic_publisher" );
 
+ ros::NodeHandle nh;
+ ros::Publisher  topic_pub = nh.advertise < std_msgs::Int32 > ("/numbers", 10);
 
- ros::spin();
+ ros::Rate rate(10); //run at 10Hz
 
+ int count=0;
+
+ while( ros::ok() ){
+
+   std_msgs::Int32 msg;
+   msg.data = count++;
+
+   ROS_INFO("%d", msg.data);
+
+   topic_pub.publish(msg);
+
+   rate.sleep();
  }
+
+
+}
