@@ -5,7 +5,7 @@
 
 	<arg name="paused" default="false"/>
 	<arg name="use_sim_time" default="true"/>
-	<arg name="gui" default="true"/>
+	<arg name="gui" default="false"/>
 	<arg name="headless" default="false"/>
 	<arg name="debug" default="false"/>
 	
@@ -19,7 +19,8 @@
 	</include>
 
 	<rosparam file="$(find kuka_iiwa_support)/conf/kuka_iiwa_controller.yaml" command="load"/>
-	<node name="controller_spawner" pkg="controller_manager" type="spawner" respawn="false" output="screen" ns="/kuka_iiwa" args="joint_state_controller
+	
+<node name="controller_spawner" pkg="controller_manager" type="spawner" respawn="false" output="screen" ns="/kuka_iiwa" args="joint_state_controller joint1_position_controller" /><!--
 		joint1_position_controller
 		joint2_position_controller
 		joint3_position_controller
@@ -27,7 +28,7 @@
 		joint5_position_controller
 		joint6_position_controller
 		"/>
-
+-->
 	<!-- Load the URDF into the ROS Parameter Server -->
 	<param name="robot_description" command="$(find xacro)/xacro '$(find kuka_iiwa_support)/urdf/kuka_iiwa_ctrl.xacro'" />
 	<!-- Run a python script to the send a service call to gazebo_ros to

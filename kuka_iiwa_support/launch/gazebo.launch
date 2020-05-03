@@ -9,7 +9,7 @@
 	<arg name="headless" default="false"/>
 	<arg name="debug" default="false"/>
 
- <arg name="robot_name" default="kuka_iiwa"/>
+  <arg name="robot_name" default="kuka_iiwa"/>
 
 	<!-- We resume the logic in empty_world.launch -->
 	<include file="$(find gazebo_ros)/launch/empty_world.launch">
@@ -20,11 +20,10 @@
 		<arg name="headless" value="$(arg headless)"/>
 	</include>
 
-	<!-- Load the URDF into the ROS Parameter Server -->
-	<param name="robot_description" command="$(find xacro)/xacro '$(find kuka_iiwa_support)/urdf/kuka_iiwa_ctrl.xacro'" />
-	<!-- Run a python script to the send a service call to gazebo_ros to
-spawn a URDF robot -->
-	<node name="urdf_spawner" pkg="gazebo_ros" type="spawn_model" respawn="false" output="screen" args="-urdf -model kuka_iiwa -param robot_description"/>
+	
+	<param name="robot_description" command="$(find xacro)/xacro '$(find kuka_iiwa_support)/urdf/kuka_iiwa.xacro'" />
+	<node name="urdf_spawner" pkg="gazebo_ros" type="spawn_model" respawn="false" output="screen" args="-urdf -model example -param robot_description"/>
+	
 </launch>
 
 

@@ -2,7 +2,7 @@
 
 <robot name="pan_tilt" xmlns:xacro="http://wiki.ros.org/xacro">
     <xacro:include filename="$(find rl_robot_description_pkg)/urdf/pan_tilt_macro.xacro" />
-	
+														
 		<xacro:base_link_macro 
 			base_link_name="base_link">
 		</xacro:base_link_macro>
@@ -38,7 +38,6 @@
 			</geometry>
 			<origin xyz="0 0 0" rpy="0 1.5 0.0"/>
 		</xacro:pan_tilt_link>
-		
 		
 
 </robot>

@@ -26,7 +26,7 @@
       <visual>
         <origin xyz="0 0 0" rpy="0 0 0"/>
         <geometry>
-          <mesh filename="package://iiwa_description/meshes/iiwa7/visual/link_0.stl"/>
+          <mesh filename="package://kuka_iiwa_support/meshes/iiwa7/visual/link_0.stl"/>
         </geometry>
         <material name="Grey"/>
       </visual>
@@ -34,7 +34,7 @@
       <collision>
         <origin xyz="0 0 0" rpy="0 0 0"/>
         <geometry>
-          <mesh filename="package://iiwa_description/meshes/iiwa7/collision/link_0.stl"/>
+          <mesh filename="package://kuka_iiwa_support/meshes/iiwa7/collision/link_0.stl"/>
         </geometry>
         <material name="Grey"/>
       </collision>
@@ -67,14 +67,14 @@
       <visual>
         <origin xyz="0 0 0.0075" rpy="0 0 0"/>
         <geometry>
-          <mesh filename="package://iiwa_description/meshes/iiwa7/visual/link_1.stl"/>
+          <mesh filename="package://kuka_iiwa_support/meshes/iiwa7/visual/link_1.stl"/>
         </geometry>
         <material name="Orange"/>
       </visual>
       <collision>
         <origin xyz="0 0 0.0075" rpy="0 0 0"/>
         <geometry>
-          <mesh filename="package://iiwa_description/meshes/iiwa7/collision/link_1.stl"/>
+          <mesh filename="package://kuka_iiwa_support/meshes/iiwa7/collision/link_1.stl"/>
         </geometry>
         <material name="Orange"/>
       </collision>
@@ -103,7 +103,7 @@
       <visual>
         <origin xyz="0 0 0" rpy="0 0 0"/>
         <geometry>
-          <mesh filename="package://iiwa_description/meshes/iiwa7/visual/link_2.stl"/>
+          <mesh filename="package://kuka_iiwa_support/meshes/iiwa7/visual/link_2.stl"/>
         </geometry>
         <material name="Orange"/>
       </visual>
@@ -111,7 +111,7 @@
       <collision>
         <origin xyz="0 0 0" rpy="0 0 0"/>
         <geometry>
-          <mesh filename="package://iiwa_description/meshes/iiwa7/collision/link_2.stl"/>
+          <mesh filename="package://kuka_iiwa_support/meshes/iiwa7/collision/link_2.stl"/>
         </geometry>
         <material name="Orange"/>
       </collision>
@@ -137,7 +137,7 @@
       <visual>
         <origin xyz="0 0 -0.026" rpy="0 0 0"/>
         <geometry>
-          <mesh filename="package://iiwa_description/meshes/iiwa7/visual/link_3.stl"/>
+          <mesh filename="package://kuka_iiwa_support/meshes/iiwa7/visual/link_3.stl"/>
         </geometry>
         <material name="Orange"/>
       </visual>
@@ -145,7 +145,7 @@
       <collision>
         <origin xyz="0 0 -0.026" rpy="0 0 0"/>
         <geometry>
-          <mesh filename="package://iiwa_description/meshes/iiwa7/collision/link_3.stl"/>
+          <mesh filename="package://kuka_iiwa_support/meshes/iiwa7/collision/link_3.stl"/>
         </geometry>
         <material name="Orange"/>
       </collision>
@@ -171,7 +171,7 @@
       <visual>
         <origin xyz="0 0 0" rpy="0 0 0"/>
         <geometry>
-          <mesh filename="package://iiwa_description/meshes/iiwa7/visual/link_4.stl"/>
+          <mesh filename="package://kuka_iiwa_support/meshes/iiwa7/visual/link_4.stl"/>
         </geometry>
         <material name="Orange"/>
       </visual>
@@ -179,7 +179,7 @@
       <collision>
         <origin xyz="0 0 0" rpy="0 0 0"/>
         <geometry>
-          <mesh filename="package://iiwa_description/meshes/iiwa7/collision/link_4.stl"/>
+          <mesh filename="package://kuka_iiwa_support/meshes/iiwa7/collision/link_4.stl"/>
         </geometry>
         <material name="Orange"/>
       </collision>
@@ -204,7 +204,7 @@
       <visual>
         <origin xyz="0 0 -0.026" rpy="0 0 0"/>
         <geometry>
-          <mesh filename="package://iiwa_description/meshes/iiwa7/visual/link_5.stl"/>
+          <mesh filename="package://kuka_iiwa_support/meshes/iiwa7/visual/link_5.stl"/>
         </geometry>
         <material name="Orange"/>
       </visual>
@@ -212,7 +212,7 @@
       <collision>
         <origin xyz="0 0 -0.026" rpy="0 0 0"/>
         <geometry>
-          <mesh filename="package://iiwa_description/meshes/iiwa7/collision/link_5.stl"/>
+          <mesh filename="package://kuka_iiwa_support/meshes/iiwa7/collision/link_5.stl"/>
         </geometry>
         <material name="Orange"/>
       </collision>
@@ -237,7 +237,7 @@
       <visual>
         <origin xyz="0 0 0" rpy="0 0 0"/>
         <geometry>
-          <mesh filename="package://iiwa_description/meshes/iiwa7/visual/link_6.stl"/>
+          <mesh filename="package://kuka_iiwa_support/meshes/iiwa7/visual/link_6.stl"/>
         </geometry>
         <material name="Orange"/>
       </visual>
@@ -245,7 +245,7 @@
       <collision>
         <origin xyz="0 0 0" rpy="0 0 0"/>
         <geometry>
-          <mesh filename="package://iiwa_description/meshes/iiwa7/collision/link_6.stl"/>
+          <mesh filename="package://kuka_iiwa_support/meshes/iiwa7/collision/link_6.stl"/>
         </geometry>
         <material name="Orange"/>
       </collision>
@@ -270,7 +270,7 @@
       <visual>
         <origin xyz="0 0 -0.0005" rpy="0 0 0"/>
         <geometry>
-          <mesh filename="package://iiwa_description/meshes/iiwa7/visual/link_7.stl"/>
+          <mesh filename="package://kuka_iiwa_support/meshes/iiwa7/visual/link_7.stl"/>
         </geometry>
         <material name="Grey"/>
       </visual>
@@ -278,7 +278,7 @@
       <collision>
         <origin xyz="0 0 -0.0005" rpy="0 0 0"/>
         <geometry>
-          <mesh filename="package://iiwa_description/meshes/iiwa7/collision/link_7.stl"/>
+          <mesh filename="package://kuka_iiwa_support/meshes/iiwa7/collision/link_7.stl"/>
         </geometry>
         <material name="Grey"/>
       </collision>

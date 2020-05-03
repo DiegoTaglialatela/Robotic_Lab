@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <robot name="kuka_iiwa" xmlns:xacro="http://www.ros.org/wiki/xacro">
    
-  <xacro:include filename="$(find iiwa_description)/urdf/utilities.xacro" />
+  <xacro:include filename="$(find kuka_iiwa_support)/urdf/utilities.xacro" />
   <xacro:include filename="$(find kuka_iiwa_support)/urdf/kuka_iiwa_macro.xacro"/>
 
   <xacro:arg name="robot_name" default="iiwa"/>
